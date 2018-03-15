@@ -3,7 +3,7 @@ namespace azure_search
     using System;
     using System.Text;
 
-    public partial class FAQ
+    public partial class Article
     {
         // This implementation of ToString() is only for the purposes of the sample console application.
         // You can override ToString() in your own model class if you want, but you don't need to in order
@@ -12,10 +12,9 @@ namespace azure_search
         {
             var builder = new StringBuilder();
 
-            builder.AppendFormat("Question {0}: {1}", ID, Question).AppendLine();
-            builder.AppendFormat("Answer: {0}", Answer).AppendLine();
-            builder.AppendFormat("Keywords: {0}", Keywords).AppendLine();
-            builder.AppendFormat("Url: {0}", Url).AppendLine();
+            builder.AppendFormat("Article {0}: {1}", ID, Title).AppendLine();
+            builder.AppendFormat("Author: {0}", Author).AppendLine();
+            builder.AppendFormat("CreationDate: {0}", CreationDate.ToString()).AppendLine();
             return builder.ToString();
         }
     }
